@@ -36,7 +36,7 @@ def static_cat(output_data):
        :param output_data: output path
        :return:
        """
-    host = "mongodb://10.180.67.14:27017,10.57.83.93:27017,100.97.5.73:27017/?replicaSet=rs0"
+    host = "mongodb://yourdatapath"
     client = pymongo.MongoClient(host, unicode_decode_error_handler='ignore')
     db = client.mp
     print(db.docs, db.docs.find().count())
@@ -62,7 +62,7 @@ def conn_mongo(domains, output):
     :param output: output file path
     :return:
     """
-    host = "mongodb://10.180.67.14:27017,10.57.83.93:27017,100.97.5.73:27017/?replicaSet=rs0"
+    host = "mongodb://yourdatapath"
     client = pymongo.MongoClient(host, unicode_decode_error_handler='ignore')
     db = client.mp
     print(db.docs, db.docs.find().count())
